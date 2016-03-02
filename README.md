@@ -8,6 +8,11 @@ You have two Raspberry PIs, one is connected to a sensor - such as a PIR and the
 * For every minute the PIR sees inactivity there will be one dot displayed on the scrollphat.
 * If the PIR senses motion it will reset the timer and the display
 
+![Sample image of live scrollphat system](/docs/output_display.jpg)
+
+*Sample picture of the output display after several minutes of inactivity*
+
+
 ### Running the code
 
 **On the sensing PI:**
