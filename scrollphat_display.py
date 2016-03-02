@@ -1,7 +1,7 @@
 import scrollphat
 import time
 
-class scrollphat_display:
+class output_display:
     def __init__(self):
         MID_LEVEL = 10
         scrollphat.clear()

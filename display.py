@@ -1,17 +1,17 @@
 import sys
 import time
+from config import config_values
 
-#from displays import terminal_display
-from scrollphat_display import scrollphat_display
+#from terminal_display import output_display
+from scrollphat_display import output_display
 from redis_controller import redis_controller
 
-#display = terminal_display()
-display = scrollphat_display()
-redis_controller1 = redis_controller("Timer1", sys.argv[1])
+output_display1 = output_display()
+redis_controller1 = redis_controller(config_values["redis_key"], sys.argv[1])
 
 def messageReady():
     print ("_")
-    display.display(redis_controller1.get())
+    output_display1.display(redis_controller1.get())
 
 redis_controller1.set_subscriber_callback(messageReady)
 redis_controller1.subscribe()
