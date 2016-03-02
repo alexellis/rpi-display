@@ -2,8 +2,12 @@ import sys
 import time
 from config import config_values
 
-#from terminal_display import output_display
-from scrollphat_display import output_display
+# Alternative displays:
+# terminal_display
+# numeric_scrollphat_display
+# pixel_scrollphat_display
+
+from pixel_scrollphat_display import output_display
 from redis_controller import redis_controller
 
 output_display1 = output_display()
