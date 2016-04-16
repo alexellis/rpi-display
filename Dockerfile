@@ -1,5 +1,8 @@
 FROM alexellis2/python-gpio:armv6
 
+# This Dockerfile is for the sender.py part of the project
+# it watches a PIR sensor and communicates to Redis
+
 # Install redis.
 # This could also be linked in from another container.
 RUN apt-get install redis-server
