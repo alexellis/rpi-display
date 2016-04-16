@@ -5,7 +5,11 @@ FROM alexellis2/python-gpio:armv6
 
 # Install redis.
 # This could also be linked in from another container.
-RUN apt-get install redis-server
+RUN apt-get update && \
+    apt-get install redis-server && \
+	rm -rf /var/lib/apt/lists/* && \
+	apt-get -qy clean all
+
 RUN pip install redis
 
 # Add source code
