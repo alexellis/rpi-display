@@ -12,4 +12,6 @@ RUN pip install redis
 ADD *.py ./
 ADD *.sh ./
 RUN chmod +x *.sh
+
+EXPOSE 6379
 CMD ["/bin/bash", "./docker_start.sh"]
